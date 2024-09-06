@@ -52,7 +52,7 @@ function VerificationForm() {
         setIsSubmitting(true); // Disable submit button when submitting
 
         try {
-            const response = await axios.post('http://localhost:5000/verify-code', { code: fullCode });
+            const response = await axios.post('https://my-app-ov1p.onrender.com/verify-code', { code: fullCode });
             if (response.status === 200) {
                 window.location.href = '/success'; // Redirect to success page
             }
